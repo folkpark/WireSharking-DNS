@@ -1,1 +1,48 @@
+DNS Lab:
 
+(1). C:\Users\pfolkman>nslookup http://www.sbs.co.kr/
+Server:  HG6Box
+Address:  192.168.1.1
+
+Non-authoritative answer:
+Name:    http://www.sbs.co.kr/.us.oracle.com
+Addresses:  198.105.254.24   <--- This is the sites IP address
+          198.105.244.24
+
+(2). C:\Users\pfolkman>nslookup -type=NS uwe.ac.uk
+Server:  HG6Box
+Address:  192.168.1.1
+
+Non-authoritative answer:
+uwe.ac.uk       nameserver = gate.uwe.ac.uk
+uwe.ac.uk       nameserver = tamarin.bath.ac.uk
+
+tamarin.bath.ac.uk      internet address = 138.38.32.3
+
+C:\Users\pfolkman>nslookup -type=NS uwe.ac.uk tamarin.bath.ac.uk
+Server:  robot.bath.ac.uk
+Address:  138.38.32.3
+
+uwe.ac.uk       nameserver = gate.uwe.ac.uk
+uwe.ac.uk       nameserver = tamarin.bath.ac.uk
+gate.uwe.ac.uk  internet address = 164.11.100.10
+tamarin.bath.ac.uk      internet address = 138.38.32.3
+
+(3). Neither of the authoritative dns servers were able to query for yahoo's mail server 'imap.mail.yahoo.com'
+C:\Users\pfolkman>nslookup gate.uwe.ac.uk imap.mail.yahoo.com
+DNS request timed out.
+    timeout was 2 seconds.
+Server:  UnKnown
+Address:  208.71.45.81
+
+DNS request timed out.
+    timeout was 2 seconds.
+DNS request timed out.
+    timeout was 2 seconds.
+DNS request timed out.
+    timeout was 2 seconds.
+DNS request timed out.
+    timeout was 2 seconds.
+*** Request to UnKnown timed-out
+
+(4). 
