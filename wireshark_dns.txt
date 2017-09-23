@@ -45,4 +45,8 @@ DNS request timed out.
     timeout was 2 seconds.
 *** Request to UnKnown timed-out
 
-(4). 
+(4). It is sent over TCP.
+(5). The destination port for the DNS query message is 53. The source port
+of DNS response message is 53.
+(6). The IP address the DNS query message is sent to is 192.168.1.12 and with the IPconfig it is 192.168.1.12 as well.
+(7). The "Type" is ............
