@@ -45,10 +45,43 @@ DNS request timed out.
     timeout was 2 seconds.
 *** Request to UnKnown timed-out
 
-(4). It is sent over TCP.
+(4). It is sent over UDP.
 (5). The destination port for the DNS query message is 53. The source port
 of DNS response message is 53.
 (6). The IP address the DNS query message is sent to is 192.168.1.12 and with the IPconfig it is 192.168.1.12 as well.
 (7). The "Type" is A (Host Address) (1), no answers
 (8). 3 Answers with the url, ip address, class, type, and time to live.
-(9). 
+(9). The destination IP address of the DNS response message (4.31.198.44) matches the IP found in Wireshark. 
+(10). No new DNS queries were made to retreive images. Wireshark shows that several more were made, but no new names resolved.  
+(11). Destination port: 51523; src port: 53
+(12). The IP address the response is sent to is: 192.168.1.3. This is my default DNS server found by using ipconfig /all
+(13). It is an A record request. I also see subsequent AAAA record requests in wireshark. 
+(14). I do not see any 'answers' provided by this site. It gives a response that either the name exists or it does not. 
+(16). The DNS request was first sent to my router: 192.168.1.1. This was not the address of my default DNS server. 
+(17). This DNS query has a different type. Wireshark says this is an NS request, whereas before it was an A record request. 
+(18). MIT's nameservers provide both: 
+eur5.akam.net   internet address = 23.74.25.64
+usw2.akam.net   internet address = 184.26.161.64
+use2.akam.net   internet address = 96.7.49.64
+ns1-37.akam.net internet address = 193.108.91.37
+asia1.akam.net  internet address = 95.100.175.64
+ns1-173.akam.net        internet address = 193.108.91.173
+asia2.akam.net  internet address = 95.101.36.64
+use5.akam.net   internet address = 2.16.40.64
+(20-22). I get a timeout when running the requested command:
+C:\Users\pfolkman>nslookup www.aiit.or.kr bitsy.mit.edu
+DNS request timed out.
+    timeout was 2 seconds.
+Server:  UnKnown
+Address:  18.72.0.3
+
+DNS request timed out.
+    timeout was 2 seconds.
+DNS request timed out.
+    timeout was 2 seconds.
+DNS request timed out.
+    timeout was 2 seconds.
+DNS request timed out.
+    timeout was 2 seconds.
+*** Request to UnKnown timed-out
+
