@@ -49,4 +49,6 @@ DNS request timed out.
 (5). The destination port for the DNS query message is 53. The source port
 of DNS response message is 53.
 (6). The IP address the DNS query message is sent to is 192.168.1.12 and with the IPconfig it is 192.168.1.12 as well.
-(7). The "Type" is ............
+(7). The "Type" is A (Host Address) (1), no answers
+(8). 3 Answers with the url, ip address, class, type, and time to live.
+(9). 
